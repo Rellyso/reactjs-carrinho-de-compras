@@ -1,11 +1,10 @@
-import React from 'react';
 import {
   MdDelete,
   MdAddCircleOutline,
   MdRemoveCircleOutline,
 } from 'react-icons/md';
 
-// import { useCart } from '../../hooks/useCart';
+import { useCart } from '../../hooks/useCart';
 // import { formatPrice } from '../../util/format';
 import { Container, ProductTable, Total } from './styles';
 
@@ -18,10 +17,12 @@ interface Product {
 }
 
 const Cart = (): JSX.Element => {
-  // const { cart, removeProduct, updateProductAmount } = useCart();
+  const { cart, removeProduct, updateProductAmount } = useCart();
+
+  console.log(cart);
 
   // const cartFormatted = cart.map(product => ({
-  //   // TODO
+
   // }))
   // const total =
   //   formatPrice(
